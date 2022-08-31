@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const para1 = document.createElement("p");
+            para1.innerText = "Nhap so a";
+            const para2 = document.createElement("p");
+            para2.innerText = "Nhap so b";
+            const para3 = document.createElement("p");
+
+            var input_1 = document.createElement("INPUT");
+            input_1.setAttribute("type", "text");
+            input_1.setAttribute("placeholder", "Nhập vào a");
+
+            var input_2 = document.createElement("INPUT");
+            input_2.setAttribute("type", "text");
+            input_2.setAttribute("placeholder", "Nhập vào b");
+
+            const button = document.createElement("button");
+            button.style.backgroundColor = "green";
+            button.style.display = "block";
+            button.innerHTML = "a+b";
+            button.style.color = "white";
+            button.style.margin = "5px";
+            button.style.border = "none";
+
+            button.addEventListener("click", function () {
+                var result = Number(input_1.value) + Number(input_2.value);
+
+                para3.innerText = result;
+            });
+
+            document.body.appendChild(para1);
+            document.body.appendChild(input_1);
+            document.body.appendChild(para2);
+            document.body.appendChild(input_2);
+
+            document.body.appendChild(button);
+            document.body.appendChild(para3);
+        </script>
+    </body>
+</html>
